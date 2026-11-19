@@ -1,0 +1,56 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marsaleh <marsaleh@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/14 14:43:43 by marsaleh          #+#    #+#             */
+/*   Updated: 2026/11/19 11:35:11 by marsaleh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+void	print_stacks(t_list *a, t_list *b)
+{
+	t_list	*tmp;
+
+	tmp = a;
+	ft_printf("a: ");
+	while (tmp)
+	{
+		ft_printf("%d ", *(int *) tmp->content);
+		tmp = tmp->next;
+	}
+	ft_printf("\nb: ");
+	tmp = b;
+	while (tmp)
+	{
+		ft_printf("%d ", *(int *) tmp->content);
+		tmp = tmp->next;
+	}
+	ft_printf("\n");
+}
+#include "push_swap.h"
+#include <stdio.h>
+
+int	main(int argc, char **argv)
+{
+	t_list	*a;
+	t_list	*b;
+
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		return (0);
+	if (!parser(argc, argv, &a))
+	{
+		stack_free(&a);
+		write(2, "Error\n", 6);
+		return (1);
+	}
+	rank_list(a);
+	selction_sort(&a, &b);
+	print_stacks(a, b);
+}
