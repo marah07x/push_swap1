@@ -19,19 +19,19 @@ int	*operations_count(void)
 	return (operations);
 }
 
-int    count_total(int *(*operations)(void))
+int	count_total(int *(*operations)(void))
 {
-    int    total;
-    int    i;
+	int	total;
+	int	i;
 
-    i = 0;
-    total = 0;
-    while (i < 11)
-    {
-        total += operations()[i];
-        i++;
-    }
-    return (total);
+	i = 0;
+	total = 0;
+	while (i < 11)
+	{
+		total += operations()[i];
+		i++;
+	}
+	return (total);
 }
 
 void	print_op_count(char *operation, int count)

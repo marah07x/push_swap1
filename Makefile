@@ -6,7 +6,7 @@ PRINTF_DIR  = printf
 PRINTF      = $(PRINTF_DIR)/libftprintf.a
 LIBFT_DIR   = $(PRINTF_DIR)/libft42
 LIBFT       = $(LIBFT_DIR)/libft.a
-SRCS        = main.c parser.c value_checks.c swap_operations.c push_operations.c lst_pop.c rotate_operations.c reverse_operations.c disorder.c chunk_based_sort.c operations_count.c selection_sort.c
+SRCS        = main.c parser.c value_checks.c swap_operations.c push_operations.c lst_pop.c rotate_operations.c reverse_operations.c disorder.c chunk_based_sort.c operations_count.c selection_sort.c flags.c
 OBJS        = $(SRCS:.c=.o)
 INCLUDES    = -I. -I$(PRINTF_DIR) -I$(LIBFT_DIR)
 

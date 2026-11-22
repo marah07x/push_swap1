@@ -25,7 +25,7 @@ void	rank_list(t_list *a)
 		next = a;
 		while (next)
 		{
-			if (*(int *) next->content < *(int *) current->content)
+			if (*(int *)next->content < *(int *)current->content)
 				rank++;
 			next = next->next;
 		}

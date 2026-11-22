@@ -61,7 +61,6 @@ void	chunk_based(t_list **a, t_list **b)
 	index = 0;
 	size = ft_lstsize(*a);
 	chunk_size = sqr(size);
-
 	while (index < size)
 	{
 		if ((*a)->index < index)

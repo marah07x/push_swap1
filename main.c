@@ -6,55 +6,58 @@
 /*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 14:43:43 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/22 14:32:04 by balsaray         ###   ########.fr       */
+/*   Updated: 2026/11/22 21:02:20 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stacks(t_list *a, t_list *b)
+int	input_val(int argc, char **argv, t_list **a, int *strategy)
 {
-	t_list	*tmp;
+	int	bench;
+	int	start;
 
-	tmp = a;
-	ft_printf("a: ");
-	while (tmp)
+	bench = 0;
+	start = read_flag(argc, argv, strategy, &bench);
+	if (start == -1)
 	{
-		ft_printf("%d ", *(int *) tmp->content);
-		tmp = tmp->next;
+		write(2, "Error\n", 6);
+		return (-1);
 	}
-	ft_printf("\nb: ");
-	tmp = b;
-	while (tmp)
+	if (start == argc)
+		return (0);
+	if (!parser(argc, argv, a, start))
 	{
-		ft_printf("%d ", *(int *) tmp->content);
-		tmp = tmp->next;
+		stack_free(a);
+		write(2, "Error\n", 6);
+		return (-1);
 	}
-	ft_printf("\n");
+	return (1);
 }
-#include "push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
 	t_list	*a;
 	t_list	*b;
+	int		strategy;
+	int		valid;
 
 	a = NULL;
 	b = NULL;
 	if (argc < 2)
 		return (0);
-	if (!parser(argc, argv, &a))
-	{
-		stack_free(&a);
-		write(2, "Error\n", 6);
+	strategy = 0;
+	valid = input_val(argc, argv, &a, &strategy);
+	if (valid == -1)
 		return (1);
-	}
+	if (valid == 0)
+		return (0);
 	if (!is_sorted(a))
 	{
 		rank_list(a);
-		chunk_based(&a, &b);
+		select_strategy(strategy, &a, &b);
 	}
 	stack_free(&a);
 	stack_free(&b);
+	return (0);
 }

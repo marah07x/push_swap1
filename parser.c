@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marsaleh <marsaleh@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 11:34:41 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/18 11:21:50 by marsaleh         ###   ########.fr       */
+/*   Updated: 2026/11/22 20:08:47 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,13 @@ static int	check_index(char **s, t_list **a, int i)
 	return (1);
 }
 
-int	parser(int argc, char **argv, t_list **a)
+int	parser(int argc, char **argv, t_list **a, int start)
 {
 	char	**s;
 	int		index1;
 	int		index2;
 
-	index1 = 1;
+	index1 = start;
 	while (index1 < argc)
 	{
 		s = ft_split(argv[index1++], ' ');

@@ -16,7 +16,7 @@ int	is_sorted(t_list *a)
 {
 	while (a && a->next)
 	{
-		if (*(int *) a->content > *(int *) a->next->content)
+		if (*(int *)a->content > *(int *)a->next->content)
 			return (0);
 		a = a->next;
 	}

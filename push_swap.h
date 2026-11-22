@@ -6,7 +6,7 @@
 /*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 11:24:19 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/22 19:50:26 by balsaray         ###   ########.fr       */
+/*   Updated: 2026/11/22 20:36:09 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # define ADAPTIVE 4
 # define BENCH 5
 
-int	is_duplicate(t_list *a, int value);
-int	parser(int argc, char **argv, t_list **a);
+int		is_duplicate(t_list *a, int value);
+int		parser(int argc, char **argv, t_list **a, int start);
 
 void	stack_free(t_list **lst);
 
@@ -53,7 +53,8 @@ t_list	*selction_sort(t_list **a, t_list **b);
 void	print_op_count(char *operation, int count);
 void	chunk_based(t_list **a, t_list **b);
 void	rank_list(t_list *a);
-int	is_sorted(t_list *a);
-int	read_flag(int argc, char **argv, int *strategy, int *bench);
+int		is_sorted(t_list *a);
+int		read_flag(int argc, char **argv, int *strategy, int *bench);
+void	select_strategy(int strategy, t_list **a, t_list **b);
 
 #endif
