@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marsaleh <marsaleh@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 14:43:43 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/19 11:35:11 by marsaleh         ###   ########.fr       */
+/*   Updated: 2026/11/22 14:32:04 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,11 @@ int	main(int argc, char **argv)
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	rank_list(a);
-	selction_sort(&a, &b);
-	print_stacks(a, b);
+	if (!is_sorted(a))
+	{
+		rank_list(a);
+		chunk_based(&a, &b);
+	}
+	stack_free(&a);
+	stack_free(&b);
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   lst_pop.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marsaleh <marsaleh@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 11:24:26 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/19 11:36:15 by marsaleh         ###   ########.fr       */
+/*   Updated: 2026/11/22 14:23:21 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	rank_list(t_list *a)
+void	rank_list(t_list *a)
 {
 	t_list	*current;
 	t_list	*next;

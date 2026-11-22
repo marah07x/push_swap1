@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   chunk_based_sort.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marsaleh <marsaleh@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 12:17:39 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/19 11:36:07 by marsaleh         ###   ########.fr       */
+/*   Updated: 2026/11/22 14:47:40 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h
+#include "push_swap.h"
 
 static int	sqr(int n)
 {
@@ -61,7 +61,7 @@ void	chunk_based(t_list **a, t_list **b)
 	index = 0;
 	size = ft_lstsize(*a);
 	chunk_size = sqr(size);
-	rank_list(*a);
+
 	while (index < size)
 	{
 		if ((*a)->index < index)
