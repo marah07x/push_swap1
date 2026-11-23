@@ -1,22 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-<<<<<<< Updated upstream
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 14:43:43 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/22 21:02:20 by balsaray         ###   ########.fr       */
-=======
-/*                                                       :::      ::::::::    */
-/*   main.c                                            :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: marsaleh <marsaleh@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/11/14 14:43:43 by marsaleh         #+#    #+#              */
-/*   Updated: 2026/11/19 13:48:44 by marsaleh        ###   ########.fr        */
->>>>>>> Stashed changes
+/*   Updated: 2026/11/23 10:53:59 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +57,7 @@ int	main(int argc, char **argv)
 		rank_list(a);
 		select_strategy(strategy, &a, &b);
 	}
-<<<<<<< Updated upstream
 	stack_free(&a);
 	stack_free(&b);
 	return (0);
-=======
-	rank_list(a);
-	chunk_based(&a, &b);
-	print_op_count("pa", operations_count()[3]);
-	//print_stacks(a, b);
->>>>>>> Stashed changes
 }
