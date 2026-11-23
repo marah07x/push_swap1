@@ -1,22 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-<<<<<<< Updated upstream
 /*                                                        :::      ::::::::   */
 /*   operations_count.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: marsaleh <marsaleh@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/17 13:55:29 by balsaray          #+#    #+#             */
-/*   Updated: 2026/11/22 14:23:02 by balsaray         ###   ########.fr       */
-=======
-/*                                                       :::      ::::::::    */
-/*   operations_count.c                                :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: marsaleh <marsaleh@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/11/17 13:55:29 by marsaleh         #+#    #+#              */
-/*   Updated: 2026/11/19 13:45:10 by marsaleh        ###   ########.fr        */
->>>>>>> Stashed changes
+/*   Created: 2026/11/17 13:55:29 by marsaleh          #+#    #+#             */
+/*   Updated: 2026/11/23 09:04:52 by marsaleh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

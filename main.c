@@ -67,14 +67,7 @@ int	main(int argc, char **argv)
 		rank_list(a);
 		select_strategy(strategy, &a, &b);
 	}
-<<<<<<< Updated upstream
 	stack_free(&a);
 	stack_free(&b);
 	return (0);
-=======
-	rank_list(a);
-	chunk_based(&a, &b);
-	print_op_count("pa", operations_count()[3]);
-	//print_stacks(a, b);
->>>>>>> Stashed changes
 }
