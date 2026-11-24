@@ -6,7 +6,7 @@
 /*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 11:24:19 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/22 20:36:09 by balsaray         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:03:25 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ void	rank_list(t_list *a);
 int		is_sorted(t_list *a);
 int		read_flag(int argc, char **argv, int *strategy, int *bench);
 void	select_strategy(int strategy, t_list **a, t_list **b);
+void	sort_2nodes(t_list **a);
+void	sort_3nodes(t_list **a);
 
 #endif

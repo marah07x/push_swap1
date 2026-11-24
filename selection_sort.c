@@ -6,7 +6,7 @@
 /*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 12:36:47 by marsaleh          #+#    #+#             */
-/*   Updated: 2026/11/22 14:57:23 by balsaray         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:04:42 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,7 @@ t_list	*selction_sort(t_list **a, t_list **b)
 
 	if (!a || !*a || !(*a)->next)
 		return (NULL);
-	if (ft_lstsize(*a) == 2)
-		sort_2nodes(a);
-	else if (ft_lstsize(*a) == 3)
-		sort_3nodes(a);
-	while ((*a)->next && !is_sorted(*a))
+	while (ft_lstsize(*a) > 3 && !is_sorted(*a))
 	{
 		min_node = find_min(*a, &min_index, &size);
 		while (*a != min_node)
@@ -95,6 +91,10 @@ t_list	*selction_sort(t_list **a, t_list **b)
 		}
 		pb(a, b);
 	}
+	if (ft_lstsize(*a) == 2)
+		sort_2nodes(a);
+	else if (ft_lstsize(*a) == 3)
+		sort_3nodes(a);
 	while (*b)
 		pa(a, b);
 	return (*a);

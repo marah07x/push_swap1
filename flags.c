@@ -6,7 +6,7 @@
 /*   By: balsaray <balsaray@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 15:00:46 by balsaray          #+#    #+#             */
-/*   Updated: 2026/11/22 21:01:39 by balsaray         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:02:54 by balsaray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,13 @@ int	read_flag(int argc, char **argv, int *strategy, int *bench)
 
 void	select_strategy(int strategy, t_list **a, t_list **b)
 {
-	if (strategy == SIMPLE)
+	if (ft_lstsize(*a) == 2)
+		sort_2nodes(a);
+	else if (ft_lstsize(*a) == 3)
+		sort_3nodes(a);
+	else if (ft_lstsize(*a) <= 5)
+		selction_sort(a, b);
+	else if (strategy == SIMPLE)
 		selction_sort(a, b);
 	else if (strategy == MEDIUM)
 		chunk_based(a, b);
